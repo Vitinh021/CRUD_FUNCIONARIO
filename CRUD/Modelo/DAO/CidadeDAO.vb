@@ -7,9 +7,9 @@ Public Class CidadeDAO
     Private Shared dr As SqlClient.SqlDataReader
 
     Public Enum PROCEDURE
-        InserirCidade
-        AtualizarCidade
-        RemoverCidade
+        sp_InsCidade
+        sp_UpdCidade
+        sp_DelCidade
     End Enum
 
     Public Shared Function GetCidades() As DataSet
@@ -57,17 +57,17 @@ Public Class CidadeDAO
             comando = Conexao.Conectar().CreateCommand
             comando.CommandType = CommandType.StoredProcedure
 
-            If query = PROCEDURE.InserirCidade Then
-                comando.CommandText = PROCEDURE.InserirCidade.ToString()
+            If query = PROCEDURE.sp_InsCidade Then
+                comando.CommandText = PROCEDURE.sp_InsCidade.ToString()
                 comando.Parameters.AddWithValue("@vNome", cidade.Nome)
                 comando.Parameters.AddWithValue("@iId_Estado", cidade.Estado)
-            ElseIf query = PROCEDURE.AtualizarCidade Then
-                comando.CommandText = PROCEDURE.AtualizarCidade.ToString()
+            ElseIf query = PROCEDURE.sp_UpdCidade Then
+                comando.CommandText = PROCEDURE.sp_UpdCidade.ToString()
                 comando.Parameters.AddWithValue("@iId", cidade.Id)
                 comando.Parameters.AddWithValue("@iId_Estado", cidade.Estado)
                 comando.Parameters.AddWithValue("@vNome", cidade.Nome)
-            ElseIf query = PROCEDURE.RemoverCidade Then
-                comando.CommandText = PROCEDURE.RemoverCidade.ToString()
+            ElseIf query = PROCEDURE.sp_DelCidade Then
+                comando.CommandText = PROCEDURE.sp_DelCidade.ToString()
                 comando.Parameters.AddWithValue("@iId", cidade.Id)
             End If
 

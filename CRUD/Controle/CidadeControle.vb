@@ -36,7 +36,7 @@ Public Class CidadeControle
         Me.cidade.Nome = nome
         Me.cidade.Estado = id_estado
         Try
-            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.InserirCidade)
+            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.sp_InsCidade)
         Catch ex As Exception
             Throw ex
             Return False
@@ -51,7 +51,7 @@ Public Class CidadeControle
         Me.cidade.Nome = nome
         Me.cidade.Estado = id_estado
         Try
-            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.AtualizarCidade)
+            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.sp_UpdCidade)
         Catch ex As Exception
             Throw ex
             Return False
@@ -64,7 +64,7 @@ Public Class CidadeControle
         Me.cidade = New Cidade()
         Me.cidade.Id = id
         Try
-            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.RemoverCidade)
+            Return CidadeDAO.ExecuteQuery(cidade, CidadeDAO.PROCEDURE.sp_DelCidade)
         Catch ex As Exception
             Throw ex
             Return False
