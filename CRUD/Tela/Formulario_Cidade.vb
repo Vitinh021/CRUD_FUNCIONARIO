@@ -83,7 +83,7 @@ Public Class FormularioCidade
     End Function
 
     Private Sub Limpar_Campos()
-        If DialogResult.Yes = DialogResult = MessageBox.Show("Limpar todos os campos?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information) Then
+        If DialogResult.Yes = MessageBox.Show("Limpar todos os campos?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information) Then
             Me.nome.Text = ""
             Me.cmbEstado.SelectedIndex = 0
         Else

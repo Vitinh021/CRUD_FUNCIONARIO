@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Imports CRUD_2.CidadeDAO
+Imports CRUD.CidadeDAO
 
 Public Class CidadeDAO
     Private Shared comando As SqlClient.SqlCommand
@@ -59,16 +59,16 @@ Public Class CidadeDAO
 
             If query = PROCEDURE.InserirCidade Then
                 comando.CommandText = PROCEDURE.InserirCidade.ToString()
-                comando.Parameters.AddWithValue("nome", cidade.Nome)
-                comando.Parameters.AddWithValue("@id_estado", cidade.Estado)
+                comando.Parameters.AddWithValue("@vNome", cidade.Nome)
+                comando.Parameters.AddWithValue("@iId_Estado", cidade.Estado)
             ElseIf query = PROCEDURE.AtualizarCidade Then
                 comando.CommandText = PROCEDURE.AtualizarCidade.ToString()
-                comando.Parameters.AddWithValue("id", cidade.Id)
-                comando.Parameters.AddWithValue("id_estado", cidade.Estado)
-                comando.Parameters.AddWithValue("nome", cidade.Nome)
+                comando.Parameters.AddWithValue("@iId", cidade.Id)
+                comando.Parameters.AddWithValue("@iId_Estado", cidade.Estado)
+                comando.Parameters.AddWithValue("@vNome", cidade.Nome)
             ElseIf query = PROCEDURE.RemoverCidade Then
                 comando.CommandText = PROCEDURE.RemoverCidade.ToString()
-                comando.Parameters.AddWithValue("id", cidade.Id)
+                comando.Parameters.AddWithValue("@iId", cidade.Id)
             End If
 
             Dim linhasAfetadas As Integer = comando.ExecuteNonQuery()

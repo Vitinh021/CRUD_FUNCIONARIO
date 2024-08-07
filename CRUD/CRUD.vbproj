@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F5ECF182-ED71-40B1-9BCF-7B0C664360C8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>CRUD_2.My.MyApplication</StartupObject>
-    <RootNamespace>CRUD_2</RootNamespace>
-    <AssemblyName>CRUD_2</AssemblyName>
+    <StartupObject>CRUD.My.MyApplication</StartupObject>
+    <RootNamespace>CRUD</RootNamespace>
+    <AssemblyName>CRUD</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>CRUD_2.xml</DocumentationFile>
+    <DocumentationFile>CRUD.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>CRUD_2.xml</DocumentationFile>
+    <DocumentationFile>CRUD.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

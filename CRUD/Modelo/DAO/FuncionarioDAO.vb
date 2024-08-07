@@ -67,7 +67,7 @@ Public Class FuncionarioDAO
         Try
             comando = Conexao.Conectar().CreateCommand
             comando.CommandText = "DELETE FROM funcionario WHERE iId = @id"
-            comando.Parameters.AddWithValue("id", id)
+            comando.Parameters.AddWithValue("@id", id)
             Dim linhasAfetadas As Integer = comando.ExecuteNonQuery()
             Return linhasAfetadas > 0
         Catch ex As Exception

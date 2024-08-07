@@ -113,7 +113,7 @@ Partial Class GerenciarFuncionario
         '
         'btnPesquisar
         '
-        Me.btnPesquisar.Image = Global.CRUD_2.My.Resources.Resources.lupa
+        Me.btnPesquisar.Image = Global.CRUD.My.Resources.Resources.lupa
         Me.btnPesquisar.Location = New System.Drawing.Point(314, 17)
         Me.btnPesquisar.Name = "btnPesquisar"
         Me.btnPesquisar.Size = New System.Drawing.Size(36, 29)
